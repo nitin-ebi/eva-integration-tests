@@ -9,6 +9,10 @@ if [[ -n "$SOURCE_GITHUB_SHA" ]] ; then SOURCE_GITHUB_REF=$SOURCE_GITHUB_SHA ; f
 
 echo "Clone https://github.com/${SOURCE_GITHUB_REPOSITORY}.git"
 
+# TODO: revert after testing
+SOURCE_GITHUB_REPOSITORY=nitin-ebi/eva-assembly-ingestion
+SOURCE_GITHUB_REF=java-21-upgrade
+
 git clone https://github.com/${SOURCE_GITHUB_REPOSITORY}.git eva-assembly-ingestion
 cd eva-assembly-ingestion
 git checkout ${SOURCE_GITHUB_REF}
